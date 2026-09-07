@@ -1,0 +1,25 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local configuration and credentials
+.vscode/
+.idea/
+.env
+.env.*
+*.pem
+*.key
+
+# Temporary files, duplicate exports, and OS files
+*.tmp
+*.log
+*.zip
+results/*.html
+.DS_Store
+Thumbs.db
+desktop.ini
