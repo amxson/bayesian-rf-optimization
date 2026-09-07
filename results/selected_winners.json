@@ -1,0 +1,25 @@
+{
+  "selection_metric": "mean 5-fold CV accuracy",
+  "winners": {
+    "Random Search": {
+      "params": {
+        "n_estimators": 241,
+        "max_depth": 11,
+        "min_samples_split": 4,
+        "max_features": 0.615270156526897
+      },
+      "evaluation": 4,
+      "cv_mean": 0.9626373626373628
+    },
+    "Bayesian Optimization": {
+      "params": {
+        "n_estimators": 298,
+        "max_depth": 15,
+        "min_samples_split": 4,
+        "max_features": 0.9834624208266174
+      },
+      "evaluation": 8,
+      "cv_mean": 0.9604395604395606
+    }
+  }
+}
