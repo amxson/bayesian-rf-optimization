@@ -47,12 +47,6 @@ The objective maps hyperparameters to mean five-fold CV accuracy. The GP approxi
 
 Expected Improvement uses fixed **`xi=0.01`** and considers both chance and magnitude of improvement. Exploration investigates uncertain regions; exploitation favors predicted high performance. Probability of Improvement emphasizes the chance of clearing a threshold, while Upper Confidence Bound adds an uncertainty bonus to predicted value. **PI and UCB are conceptual alternatives only; no such optimization runs were conducted.**
 
-## Gaussian Process surrogate intuition
-
-![1D slice of the GP predicted mean and uncertainty after five initialization trials](results/gp_surrogate_uncertainty.png)
-
-This snapshot uses only Bayesian initialization trials 1–5, before EI-guided search begins. It varies `max_features` while fixing 252 trees, depth 5, and minimum split size 9 at initialization trial 3, the best initial observation. The line is the GP mean and shading is ±1 posterior standard deviation. The magnified y-axis reveals a narrow conditional band, not confidence across the full search space. Only trial 3 lies on the slice; the other initial observations inform the full four-dimensional fit. Trial 6 is outside the slice and is not marked. EI uses both predicted performance and uncertainty to select the next full configuration for real CV evaluation.
-
 ## Results
 
 CV SD is expressed in percentage points. Baseline runtime is its CV time; search runtime includes all 20 evaluations plus optimizer overhead. Model size is uncompressed pickle protocol 5 in decimal MB. Timings below are measurements from the final fresh-kernel verification execution.
