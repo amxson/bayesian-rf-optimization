@@ -24,6 +24,8 @@ One evaluation means five forest fits. Including the separate baseline, each com
 
 ## Hyperparameter Search Space
 
+**Parameters vs hyperparameters:** split thresholds and leaf class probabilities are learned during forest fitting. Hyperparameters such as tree count, depth limit, minimum split size, and feature sampling are chosen before fitting and control how the forest learns.
+
 | Parameter | Shared range | Rationale |
 |:--|:--|:--|
 | `n_estimators` | Integer 50–300 inclusive | Tests larger forests without excessive model size. |
